@@ -26,7 +26,7 @@ Usualmente estudiantes de la UPC se olvidan estudiar o realizar tareas important
 2. Abre `index.html` en el navegador. No requiere instalación.
 
 # Aplicación publicada
-🔗 https://github.com/YaliUpc/lista-tareas
+🔗 https://yaliupc.github.io/lista-tareas/
 
 # Uso de GitHub Copilot
 - Generación de código: Copilot generó la estructura HTML y la lógica de localStorage.
@@ -38,4 +38,4 @@ Usualmente estudiantes de la UPC se olvidan estudiar o realizar tareas important
 🔗 <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202418022_upc_edu_pe/IQBBVJJ2No-UQJ593Tsjd4huAVQXt6o27F45BPTKVJsV9xk?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=kvP2Px>
 
 # Autor
-<Yali Julca Gallardo> — U202418022 UPC
+Yali Julca Gallardo — U202418022 UPC
