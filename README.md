@@ -1,11 +1,11 @@
 # Lista de Tareas con Prioridades
 
 # Problemática
-Estudiantes universitarios olvidan tareas importantes porque no tienen una forma visual de priorizar lo urgente de lo que puede esperar.
+Usualmente estudiantes de la UPC se olvidan estudiar o realizar tareas importantes porque no tienen una forma visual que les permita priorizar las tareas segun su prioridad
 
 - Contexto: Estudiantes con múltiples cursos y entregas simultáneas.
 - Usuario objetivo: Estudiantes de la UPC.
-- Solución: Aplicación web que permite registrar tareas, asignarles prioridad y verlas ordenadas para saber qué hacer primero.
+- Solución: Aplicación web que permite registrar tareas, asignarles prioridad, fechas y verlas ordenadas para saber qué hacer primero.
 
 # Funcionalidades
 1. Crear tareas con título, descripción y prioridad.

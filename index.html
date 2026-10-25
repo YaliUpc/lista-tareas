@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-419">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,25 +9,53 @@
 <body>
   <main class="app">
     <h1>📝 Mis Tareas</h1>
+    <div class="workspace">
+      <section class="task-column" aria-label="Lista de tareas">
+        <form id="task-form">
+          <input type="text" id="task-title" placeholder="Título de la tarea" required />
+          <input type="text" id="task-course" placeholder="Curso (opcional)" />
+          <textarea id="task-desc" placeholder="Descripción (opcional)"></textarea>
+          <label for="task-due-date">Fecha límite (opcional)</label>
+          <input type="date" id="task-due-date" lang="es-419" />
+          <select id="task-priority">
+            <option value="alta">🔴 Alta</option>
+            <option value="media" selected>🟡 Media</option>
+            <option value="baja">🟢 Baja</option>
+          </select>
+          <button type="submit">Agregar tarea</button>
+        </form>
 
-    <form id="task-form">
-      <input type="text" id="task-title" placeholder="Título de la tarea" required />
-      <textarea id="task-desc" placeholder="Descripción (opcional)"></textarea>
-      <select id="task-priority">
-        <option value="alta">🔴 Alta</option>
-        <option value="media" selected>🟡 Media</option>
-        <option value="baja">🟢 Baja</option>
-      </select>
-      <button type="submit">Agregar tarea</button>
-    </form>
+        <div class="filters">
+          <button data-filter="all" class="active">Todas</button>
+          <button data-filter="pending">Pendientes</button>
+          <button data-filter="done">Completadas</button>
+        </div>
 
-    <div class="filters">
-      <button data-filter="all" class="active">Todas</button>
-      <button data-filter="pending">Pendientes</button>
-      <button data-filter="done">Completadas</button>
+        <ul id="task-list"></ul>
+      </section>
+
+      <aside class="chat-panel" aria-label="Asistente de tareas">
+        <header class="chat-header">
+          <div>
+            <h2>Asistente de tareas</h2>
+            <p>Respuestas basadas en tu lista</p>
+          </div>
+          <span class="local-status">Local</span>
+        </header>
+        <div id="chat-messages" class="chat-messages" role="log" aria-live="polite">
+          <div class="message assistant-message">¡Hola! Puedo ayudarte a elegir qué hacer primero, revisar tus pendientes o ver qué fechas se acercan.</div>
+        </div>
+        <div class="chat-prompts" aria-label="Preguntas sugeridas">
+          <button type="button" data-prompt="¿Qué tarea debería priorizar?">¿Qué priorizo?</button>
+          <button type="button" data-prompt="¿Qué fechas límite se acercan?">Próximas fechas</button>
+        </div>
+        <form id="chat-form" class="chat-form">
+          <label class="visually-hidden" for="chat-input">Escribe tu pregunta</label>
+          <input type="text" id="chat-input" placeholder="Pregúntame algo..." autocomplete="off" required />
+          <button type="submit" aria-label="Enviar pregunta" title="Enviar">➤</button>
+        </form>
+      </aside>
     </div>
-
-    <ul id="task-list"></ul>
   </main>
   <script src="app.js"></script>
 </body>

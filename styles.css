@@ -8,11 +8,20 @@ body {
   padding: 2rem 1rem;
 }
 
-.app { width: 100%; max-width: 600px; }
+.app { width: 100%; max-width: 1120px; }
 
-h1 { text-align: center; margin-bottom: 1rem; color: #2c3e50; }
+h1 { margin-bottom: 1rem; color: #2c3e50; }
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 360px);
+  align-items: start;
+  gap: 1.25rem;
+}
 
 form { display: grid; gap: 0.5rem; margin-bottom: 1rem; }
+
+form label { font-size: 0.9rem; color: #2c3e50; }
 
 input, textarea, select, button {
   padding: 0.6rem;
@@ -58,8 +67,17 @@ ul { list-style: none; display: grid; gap: 0.5rem; }
 .task.baja { border-left-color: #27ae60; }
 .task.done .title { text-decoration: line-through; color: #95a5a6; }
 
-.task .title { font-weight: 600; }
+.task-heading { display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem 0.55rem; }
+.task .title { font-weight: 600; overflow-wrap: anywhere; }
+.task .course {
+  background: #e8f1f2;
+  border-radius: 999px;
+  color: #315e62;
+  font-size: 0.75rem;
+  padding: 0.15rem 0.5rem;
+}
 .task .desc { font-size: 0.9rem; color: #555; margin-top: 0.2rem; }
+.task .due-date { font-size: 0.85rem; color: #59636e; margin-top: 0.35rem; }
 
 .task .actions { display: flex; gap: 0.3rem; }
 
@@ -71,3 +89,111 @@ ul { list-style: none; display: grid; gap: 0.5rem; }
 }
 
 .task .actions button:hover { background: #ecf0f1; }
+
+.chat-panel {
+  background: #fff;
+  border: 1px solid #dce2e8;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-bottom: 1px solid #e5e9ed;
+}
+
+.chat-header h2 { color: #2c3e50; font-size: 1.05rem; }
+.chat-header p { color: #66717c; font-size: 0.82rem; margin-top: 0.2rem; }
+
+.local-status {
+  color: #28734b;
+  background: #e8f4ec;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.55rem;
+}
+
+.chat-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  height: 360px;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.message {
+  max-width: 92%;
+  padding: 0.7rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+  white-space: pre-line;
+}
+
+.assistant-message {
+  align-self: flex-start;
+  background: #f0f3f5;
+  color: #293640;
+}
+
+.user-message {
+  align-self: flex-end;
+  background: #286a85;
+  color: #fff;
+}
+
+.chat-prompts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0 1rem 0.8rem;
+}
+
+.chat-prompts button {
+  background: #f0f3f5;
+  border: 1px solid #dce2e8;
+  border-radius: 999px;
+  color: #34434d;
+  font-size: 0.78rem;
+  padding: 0.4rem 0.6rem;
+}
+
+.chat-prompts button:hover { background: #e3eaee; }
+
+.chat-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 44px;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0.8rem 1rem 1rem;
+  border-top: 1px solid #e5e9ed;
+}
+
+.chat-form input { min-width: 0; }
+.chat-form button { padding: 0; font-size: 1.15rem; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 760px) {
+  .workspace { grid-template-columns: minmax(0, 1fr); }
+  .chat-messages { height: 300px; }
+}
