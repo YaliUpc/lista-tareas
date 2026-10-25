@@ -35,7 +35,7 @@ Usualmente estudiantes de la UPC se olvidan estudiar o realizar tareas important
 - Decisiones propias: Cambié los colores sugeridos por Copilot para mejorar el contraste y ajusté el orden de los filtros para que "Todas" aparezca primero.
 
 # Video demostrativo
-🔗 <ENLACE-AL-VIDEO>
+🔗 <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202418022_upc_edu_pe/IQBBVJJ2No-UQJ593Tsjd4huAVQXt6o27F45BPTKVJsV9xk?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=kvP2Px>
 
 # Autor
-<Yali Julca Gallardo> — Universidad Peruana de Ciencias Aplicadas
+<Yali Julca Gallardo> — U202418022 UPC
